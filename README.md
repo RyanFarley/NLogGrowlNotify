@@ -24,13 +24,13 @@ To use NLog GrowlNotify, you simply wire it up as an extension in the NLog.confi
 
 The following are some sample screenshots of NLog GrowlNotify in action:
 
-<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/556f5107-a84e-44b7-8614-cdfd02e32e15/GrowlNotify_Registration.png">
+<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/962f51eb-cd31-4709-a65b-1f6022a55d69/GrowlNotify_Registration.png">
 
-<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/4a99959d-488d-4107-a07d-40ba7817610d/GrowlNotify_Info.png">
+<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/c8a86dc6-9c34-4e0c-9f0f-b8c14128d59f/GrowlNotify_Trace.png">  <img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/13ee68e1-a0cc-4ccb-9bba-fac7eb70c9df/GrowlNotify_Debug.png">
 
-<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/27ec4242-01d4-400e-8447-8891491c0e79/GrowlNotify_Warn.png">
+<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/999a3bda-1179-405b-b8bb-20f361f2bc94/GrowlNotify_Info.png">  <img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/ea2ca174-7614-4d36-ad1b-50f2d73d73c6/GrowlNotify_Warn.png">  
 
-<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/b9cf3540-2848-40e7-a1a1-295e273ab045/GrowlNotify_Fatal.png">
+<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/6f76b7b8-2299-49cd-bbe9-07fb9cf17a9d/GrowlNotify_Error.png">  <img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/de35365a-cd2b-4ecd-9635-76e37ebab9ae/GrowlNotify_Fatal.png">
 
 See more about NLog at: <a href="http://nlog-project.org/">http://nlog-project.org/</a>
 See more about Growl for Windows at: <a href="http://growlforwindows.com/">http://growlforwindows.com/</a>
