@@ -124,7 +124,7 @@ namespace NLog.Targets
 
 		protected override void Write(LogEventInfo logEvent)
 		{
-			var notification = new Notification(application.Name, logEvent.Level.ToString(), null, logEvent.LoggerShortName, logEvent.Message.Replace("\r\n", " "));
+			var notification = new Notification(application.Name, logEvent.Level.ToString(), null, string.Concat(logEvent.Level, ":", logEvent.LoggerShortName), logEvent.Message.Replace("\r\n", " "));
 			growl.Notify(notification);
 		}
 
