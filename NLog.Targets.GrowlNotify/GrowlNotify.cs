@@ -78,9 +78,10 @@ using System;
 using System.Drawing;
 using Growl.CoreLibrary;
 using Growl.Connector;
-
+	
 namespace NLog.Targets
 {
+	[NLog.Target("GrowlNotify")]
 	public class GrowlNotify : NLog.Target
 	{
 		// growl connector
@@ -102,8 +103,8 @@ namespace NLog.Targets
 			growl = new GrowlConnector();
 			growl.EncryptionAlgorithm = Cryptography.SymmetricAlgorithmType.PlainText;
 
-			application = new Application("GrowlNotify Target for NLog");
-			application.Icon.Data = GetIconData(GrowlNotifyResources.NLog);
+			application = new Application("NLog GrowlNotify");
+			application.Icon = GetIconData(GrowlNotifyResources.NLog);
 
 			trace = new NotificationType("Trace", "NLog Trace", GetIconData(GrowlNotifyResources.Trace), true);
 			debug = new NotificationType("Debug", "NLog Debug", GetIconData(GrowlNotifyResources.Debug), true);
