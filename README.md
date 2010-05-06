@@ -13,7 +13,7 @@ To use NLog GrowlNotify, you simply wire it up as an extension in the NLog.confi
     &lt;/extensions&gt;
     
     &lt;targets&gt;
-        &lt;target name=<span style="color: #008080; ">"growl"</span> type=<span style="color: #008080; ">"GrowlNotify"</span> growlpassword=<span style="color: #008080; ">""</span> <span style="color: Navy; ">/</span>&gt;
+        &lt;target name=<span style="color: #008080; ">"growl"</span> type=<span style="color: #008080; ">"GrowlNotify"</span> password=<span style="color: #008080; ">""</span> host=<span style="color: #008080; ">""</span> port=<span style="color: #008080; ">""</span> <span style="color: Navy; ">/</span>&gt;
     &lt;/targets&gt;
 
     &lt;rules&gt;
@@ -22,15 +22,17 @@ To use NLog GrowlNotify, you simply wire it up as an extension in the NLog.confi
 
 &lt;/nlog&gt;</pre>
 
+NLog GrowlNotify supports sending growl notifications locally as well as across the network. Simply include the "host", "password", and optional "port" parameters to send growl notifications to another computer.
+
 The following are some sample screenshots of NLog GrowlNotify in action:
 
-<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/962f51eb-cd31-4709-a65b-1f6022a55d69/GrowlNotify_Registration.png">
+<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/1a42ddb1-86c4-4a83-b91a-6b97d811ec40/GrowlNotify_Registration.png">
 
-<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/c8a86dc6-9c34-4e0c-9f0f-b8c14128d59f/GrowlNotify_Trace.png">  <img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/13ee68e1-a0cc-4ccb-9bba-fac7eb70c9df/GrowlNotify_Debug.png">
+<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/fdabad11-7630-4af6-bda5-c928a8927d5e/GrowlNotify_Trace.png">  <img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/208edad0-e158-4fde-8c7b-d8cd180ffe3b/GrowlNotify_Debug.png">
 
-<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/999a3bda-1179-405b-b8bb-20f361f2bc94/GrowlNotify_Info.png">  <img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/ea2ca174-7614-4d36-ad1b-50f2d73d73c6/GrowlNotify_Warn.png">  
+<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/aad65380-0539-4b39-8982-17e60fb81bfe/GrowlNotify_Info.png">  <img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/2e4fe6a2-2954-4ad0-85c7-19397129f90b/GrowlNotify_Warn.png">  
 
-<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/6f76b7b8-2299-49cd-bbe9-07fb9cf17a9d/GrowlNotify_Error.png">  <img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/de35365a-cd2b-4ecd-9635-76e37ebab9ae/GrowlNotify_Fatal.png">
+<img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/0bc73285-487b-4c98-bad1-c5eeed7e4c04/GrowlNotify_Error.png">  <img src="http://content.screencast.com/users/RyanFarley/folders/Private/media/17187701-1142-452a-a127-30a96ebfd7b9/GrowlNotify_Fatal.png">
 
 See more about NLog at: <a href="http://nlog-project.org/">http://nlog-project.org/</a>
 See more about Growl for Windows at: <a href="http://growlforwindows.com/">http://growlforwindows.com/</a>
