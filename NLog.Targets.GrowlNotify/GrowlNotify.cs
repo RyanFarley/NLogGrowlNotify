@@ -103,7 +103,7 @@ namespace NLog.Targets
 			growl = new GrowlConnector();
 			growl.EncryptionAlgorithm = Cryptography.SymmetricAlgorithmType.PlainText;
 
-			application = new Application("NLog GrowlNotify");
+			application = new Application("NLog");
 			application.Icon = GetIconData(GrowlNotifyResources.NLog);
 
 			trace = new NotificationType("Trace", "NLog Trace", GetIconData(GrowlNotifyResources.Trace), true);
@@ -124,7 +124,7 @@ namespace NLog.Targets
 
 		protected override void Write(LogEventInfo logEvent)
 		{
-			var notification = new Notification(application.Name, logEvent.Level.ToString(), null, string.Concat(logEvent.Level, ":", logEvent.LoggerShortName), logEvent.Message.Replace("\r\n", " "));
+			var notification = new Notification(application.Name, logEvent.Level.ToString(), null, string.Concat(logEvent.Level, ":", logEvent.LoggerShortName), logEvent.Message.Replace("\r\n", "\n"));
 			growl.Notify(notification);
 		}
 
