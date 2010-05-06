@@ -100,7 +100,20 @@ namespace NLog.Targets
 
 		public GrowlNotify()
 		{
-			growl = new GrowlConnector();
+			Port = 23053;
+		}
+
+		public string Password { get; set; }
+		public string Host { get; set; }
+		public int Port { get; set; }
+
+		private void RegisterApplication()
+		{
+			if (string.IsNullOrEmpty(Host))
+				growl = new GrowlConnector(Password);
+			else
+				growl = new GrowlConnector(Password, Host, Port);
+
 			growl.EncryptionAlgorithm = Cryptography.SymmetricAlgorithmType.PlainText;
 
 			application = new Application("NLog");
@@ -116,14 +129,10 @@ namespace NLog.Targets
 			growl.Register(application, new NotificationType[] { trace, debug, info, warn, error, fatal });
 		}
 
-		public string GrowlPassword
-		{
-			get { return growl.Password; }
-			set { growl.Password = value; }
-		}
-
 		protected override void Write(LogEventInfo logEvent)
 		{
+			if (growl == null) RegisterApplication();
+
 			var notification = new Notification(application.Name, logEvent.Level.ToString(), null, string.Concat(logEvent.Level, ":", logEvent.LoggerShortName), logEvent.Message.Replace("\r\n", "\n"));
 			growl.Notify(notification);
 		}
