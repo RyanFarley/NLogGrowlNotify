@@ -38,7 +38,8 @@
     <Reference Include="Growl.CoreLibrary">
       <HintPath>..\References\Growl.CoreLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="NLog">
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />

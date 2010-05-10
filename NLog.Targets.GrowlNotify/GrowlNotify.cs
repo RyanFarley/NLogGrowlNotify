@@ -81,8 +81,8 @@ using Growl.Connector;
 	
 namespace NLog.Targets
 {
-	[NLog.Target("GrowlNotify")]
-	public class GrowlNotify : NLog.Target
+	[NLog.Targets.Target("GrowlNotify")]
+	public class GrowlNotify : NLog.Targets.Target
 	{
 		// growl connector
 		private GrowlConnector growl;
@@ -133,7 +133,7 @@ namespace NLog.Targets
 		{
 			if (growl == null) RegisterApplication();
 
-			var notification = new Notification(application.Name, logEvent.Level.ToString(), null, string.Concat(logEvent.Level, ":", logEvent.LoggerShortName), logEvent.Message.Replace("\r\n", "\n"));
+			var notification = new Notification(application.Name, logEvent.Level.ToString(), null, string.Concat(logEvent.Level, ":", logEvent.LoggerName), logEvent.FormattedMessage.Replace("\r\n", "\n"));
 			growl.Notify(notification);
 		}
 
