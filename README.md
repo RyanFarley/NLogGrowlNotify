@@ -1,6 +1,6 @@
 <h1>Growl for Windows Target for NLog</h1>
 
-<b>NLog GrowlNotify</b> is a custom target for <a href="http://nlog-project.org/">NLog</a> allowing you to send logging messages to <a href="http://www.growlforwindows.com/">Growl for Windows</a>.
+<b>NLog GrowlNotify</b> is a custom target for <a href="http://nlog-project.org/">NLog</a> version 2.0 allowing you to send logging messages to <a href="http://www.growlforwindows.com/">Growl for Windows</a>.
 
 To use NLog GrowlNotify, you simply wire it up as an extension in the NLog.config file and place the NLog.Targets.GrowlNotify.dll, Growl.CoreLibrary.dll, and Growl.Connector.dll (<a href="http://github.com/downloads/RyanFarley/NLogGrowlNotify/NLog.Targets.GrowlNotify_Binaries.zip">download</a>) in the same location as the NLog.dll & NLog.config files. Then use as you would any NLog target. Below is a sample NLog.config file:
 
