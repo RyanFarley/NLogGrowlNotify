@@ -133,7 +133,7 @@ namespace NLog.Targets
 		{
 			if (growl == null) RegisterApplication();
 
-			var notification = new Notification(application.Name, logEvent.Level.ToString(), null, string.Concat(logEvent.Level, ":", logEvent.LoggerName), logEvent.FormattedMessage.Replace("\r\n", "\n"));
+			var notification = new Notification(application.Name, logEvent.Level.ToString(), null, string.Concat(logEvent.Level, ":", logEvent.LoggerName), (logEvent.FormattedMessage ?? string.Empty).Replace("\r\n", "\n"));
 			growl.Notify(notification);
 		}
 
