@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<extensions>
+    <add assembly="NLog.Targets.GrowlNotify"/>
+</extensions>
+<targets>
+    <target name="growl" xsi:type="GrowlNotify"/>
+</targets>
+<rules>
+    <logger name="*" minLevel="Trace" writeTo="growl" />
+</rules>
+</nlog>
